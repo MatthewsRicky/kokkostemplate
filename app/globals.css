@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --kokkos-cream: #f5f1e8;
+  --kokkos-paper: #fbf9f4;
+  --kokkos-charcoal: #1c1c19;
+  --kokkos-soft-black: #11110f;
+  --kokkos-green: #59654f;
+  --kokkos-green-dark: #3f4938;
+  --kokkos-wood: #9a704a;
+  --kokkos-sand: #d6c4a7;
+  --kokkos-line: rgba(28, 28, 25, 0.14);
+
+  --background: var(--kokkos-cream);
+  --foreground: var(--kokkos-charcoal);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-kokkos-cream: var(--kokkos-cream);
+  --color-kokkos-paper: var(--kokkos-paper);
+  --color-kokkos-charcoal: var(--kokkos-charcoal);
+  --color-kokkos-soft-black: var(--kokkos-soft-black);
+  --color-kokkos-green: var(--kokkos-green);
+  --color-kokkos-green-dark: var(--kokkos-green-dark);
+  --color-kokkos-wood: var(--kokkos-wood);
+  --color-kokkos-sand: var(--kokkos-sand);
+  --color-kokkos-line: var(--kokkos-line);
+
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--kokkos-charcoal);
+  color: var(--kokkos-cream);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@keyframes kokkos-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.kokkos-fade-up {
+  animation: kokkos-fade-up 0.8s ease-out both;
 }
