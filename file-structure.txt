@@ -1,0 +1,62 @@
+kokkos-cafe/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── globals.css
+│   │
+│   ├── menu/
+│   │   └── page.tsx
+│   │
+│   ├── story/
+│   │   └── page.tsx
+│   │
+│   ├── cakes/
+│   │   └── page.tsx
+│   │
+│   └── contact/
+│       └── page.tsx
+│
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   │
+│   ├── home/
+│   │   ├── Hero.tsx
+│   │   ├── Intro.tsx
+│   │   ├── StoryPreview.tsx
+│   │   ├── MenuHighlights.tsx
+│   │   ├── WorldSection.tsx
+│   │   ├── GalleryPreview.tsx
+│   │   ├── Reviews.tsx
+│   │   └── VisitSection.tsx
+│   │
+│   ├── menu/
+│   │   ├── MenuCategory.tsx
+│   │   ├── MenuItem.tsx
+│   │   └── MenuFilters.tsx
+│   │
+│   └── ui/
+│       ├── Reveal.tsx
+│       ├── SectionHeading.tsx
+│       ├── ImageReveal.tsx
+│       ├── ParallaxImage.tsx
+│       └── Button.tsx
+│
+├── data/
+│   ├── menu.ts
+│   ├── navigation.ts
+│   ├── reviews.ts
+│   └── gallery.ts
+│
+├── public/
+│   └── images/
+│       ├── hero/
+│       ├── food/
+│       ├── interior/
+│       ├── exterior/
+│       ├── cakes/
+│       └── gallery/
+│
+└── lib/
+    └── utils.ts
