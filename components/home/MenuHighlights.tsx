@@ -1,0 +1,100 @@
+import Image from "next/image";
+import Link from "next/link";
+import Reveal from "@/components/ui/Reveal";
+import { kokkosImages } from "@/data/images";
+
+const categories = [
+  {
+    number: "01",
+    title: "Breakfast",
+    description: "Start slowly. Eat well.",
+  },
+  {
+    number: "02",
+    title: "Lunch",
+    description: "Fresh, generous and made in-house.",
+  },
+  {
+    number: "03",
+    title: "Dinner",
+    description: "Good food for long evenings.",
+  },
+  {
+    number: "04",
+    title: "Something Sweet",
+    description: "Save room for dessert.",
+  },
+];
+
+export default function MenuHighlights() {
+  return (
+    <section className="bg-kokkos-paper px-6 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+      <div className="mx-auto max-w-[1600px]">
+        <Reveal>
+          <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+            <div>
+              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-kokkos-green">
+                From our kitchen
+              </p>
+
+              <h2 className="font-serif text-6xl leading-none sm:text-7xl md:text-8xl">
+                Food for
+                <br />
+                every mood.
+              </h2>
+            </div>
+
+            <Link
+              href="/menu"
+              className="group flex w-fit items-center gap-4 border-b border-kokkos-charcoal pb-2 text-[10px] font-semibold uppercase tracking-[0.2em]"
+            >
+              View full menu
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </Link>
+          </div>
+        </Reveal>
+
+        <div className="mt-16 grid gap-px bg-kokkos-line md:grid-cols-2">
+          {categories.map((category, index) => (
+            <Reveal key={category.title} delay={index * 0.05}>
+              <Link
+                href="/menu"
+                className="group relative block min-h-[260px] overflow-hidden bg-kokkos-paper p-7 sm:min-h-[320px] sm:p-10"
+              >
+                {index === 0 && (
+                  <Image
+                    src={kokkosImages.food.src}
+                    alt={kokkosImages.food.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover opacity-0 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+                  />
+                )}
+
+                <div className="relative z-10 flex h-full flex-col justify-between">
+                  <span className="text-[10px] font-semibold tracking-[0.2em] text-kokkos-green transition-colors group-hover:text-kokkos-cream/70">
+                    {category.number}
+                  </span>
+
+                  <div>
+                    <h3 className="font-serif text-4xl transition-colors group-hover:text-kokkos-cream sm:text-5xl">
+                      {category.title}
+                    </h3>
+
+                    <p className="mt-3 max-w-xs text-sm text-kokkos-charcoal/55 transition-colors group-hover:text-kokkos-cream/70">
+                      {category.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 bg-kokkos-charcoal/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

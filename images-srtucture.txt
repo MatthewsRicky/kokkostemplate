@@ -1,0 +1,46 @@
+public/
+└── images/
+    └── kokkos/
+        ├── hero.jpg
+        ├── intro.jpg
+        ├── story.jpg
+        ├── world.jpg
+        │
+        ├── gallery-01.jpg
+        ├── gallery-02.jpg
+        ├── gallery-03.jpg
+        ├── gallery-04.jpg
+        ├── gallery-05.jpg
+        ├── gallery-06.jpg
+        ├── gallery-07.jpg
+        ├── gallery-08.jpg
+        ├── gallery-09.jpg
+        ├── gallery-10.jpg
+        │
+        ├── story-hero.jpg
+        ├── story-origin.jpg
+        ├── story-food.jpg
+        ├── story-people.jpg
+        ├── story-atmosphere.jpg
+        │
+        ├── cakes-hero.jpg
+        ├── cake-01.jpg
+        ├── cake-02.jpg
+        ├── cake-03.jpg
+        ├── cake-04.jpg
+        ├── cake-05.jpg
+        ├── cake-detail.jpg
+        ├── cake-celebration.jpg
+        │
+        ├── contact-hero.jpg
+        ├── location.jpg
+        ├── contact-atmosphere.jpg
+        │
+        ├── menu-hero.jpg
+        ├── menu-breakfast.jpg
+        ├── menu-pasta.jpg
+        ├── menu-burgers.jpg
+        ├── menu-mains.jpg
+        ├── menu-curries.jpg
+        ├── menu-salad.jpg
+        └── menu-snacks.jpg
