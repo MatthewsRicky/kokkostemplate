@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { kokkosImages } from "@/data/images";
+import { images } from "@/data/images";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-kokkos-soft-black text-kokkos-cream">
       <Image
-        src={kokkosImages.hero.src}
-        alt={kokkosImages.hero.alt}
+        src={images.hero}
+        alt="Kokkos Cafe Bistro in Diani Beach"
         fill
         priority
         sizes="100vw"
@@ -15,7 +15,6 @@ export default function Hero() {
       />
 
       <div className="absolute inset-0 bg-black/45" />
-
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/30" />
 
       <div className="relative z-10 flex min-h-[100svh] flex-col justify-end px-6 pb-10 pt-32 sm:px-8 sm:pb-14 lg:px-12 lg:pb-20">

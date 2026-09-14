@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
-import { kokkosImages } from "@/data/images";
+import { images } from "@/data/images";
 
 export default function GalleryPreview() {
+  const gallery = images.homepage.gallery;
+
   return (
     <section className="bg-kokkos-paper px-6 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
       <div className="mx-auto max-w-[1600px]">
@@ -29,8 +31,8 @@ export default function GalleryPreview() {
           <Reveal className="md:col-span-7">
             <div className="relative h-[320px] overflow-hidden md:h-full">
               <Image
-                src={kokkosImages.interior.src}
-                alt={kokkosImages.interior.alt}
+                src={gallery[0]}
+                alt="Kokkos Cafe Bistro atmosphere"
                 fill
                 sizes="(max-width: 768px) 100vw, 58vw"
                 className="object-cover transition-transform duration-700 hover:scale-105"
@@ -41,8 +43,8 @@ export default function GalleryPreview() {
           <Reveal className="md:col-span-5">
             <div className="relative h-[260px] overflow-hidden md:h-full">
               <Image
-                src={kokkosImages.food.src}
-                alt={kokkosImages.food.alt}
+                src={gallery[1]}
+                alt="Food at Kokkos Cafe Bistro"
                 fill
                 sizes="(max-width: 768px) 100vw, 42vw"
                 className="object-cover transition-transform duration-700 hover:scale-105"
@@ -53,8 +55,8 @@ export default function GalleryPreview() {
           <Reveal className="md:col-span-12">
             <div className="relative h-[280px] overflow-hidden md:h-full">
               <Image
-                src={kokkosImages.atmosphere.src}
-                alt={kokkosImages.atmosphere.alt}
+                src={gallery[2]}
+                alt="Kokkos Cafe Bistro in Diani Beach"
                 fill
                 sizes="100vw"
                 className="object-cover object-center transition-transform duration-700 hover:scale-105"

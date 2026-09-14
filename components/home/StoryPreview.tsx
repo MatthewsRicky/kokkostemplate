@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
-import { kokkosImages } from "@/data/images";
+import { images } from "@/data/images";
 
 export default function StoryPreview() {
   return (
@@ -9,8 +9,8 @@ export default function StoryPreview() {
       <div className="mx-auto grid max-w-[1600px] lg:grid-cols-2">
         <div className="relative min-h-[500px] lg:min-h-[700px]">
           <Image
-            src={kokkosImages.interior.src}
-            alt={kokkosImages.interior.alt}
+            src={images.story.atmosphere}
+            alt="The atmosphere at Kokkos Cafe Bistro"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
