@@ -27,22 +27,28 @@ export default function CakesSection() {
 
               <Link
                 href="/cakes"
-                className="mt-9 inline-flex items-center gap-4 border-b border-kokkos-charcoal pb-2 text-[10px] font-semibold uppercase tracking-[0.2em] transition-colors hover:border-kokkos-green-dark hover:text-kokkos-green-dark"
+                className="group mt-9 inline-flex items-center gap-4 border-b border-kokkos-charcoal pb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-kokkos-charcoal transition-colors duration-300 hover:border-kokkos-green-dark hover:text-kokkos-green-dark"
               >
-                Explore our cakes
-                <span>→</span>
+                <span>Explore our cakes</span>
+
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  →
+                </span>
               </Link>
             </div>
           </Reveal>
         </div>
 
-        <div className="relative min-h-[500px] lg:min-h-[650px]">
+        <div className="group relative min-h-[500px] overflow-hidden lg:min-h-[650px]">
           <Image
-            src={images.cakes.celebration}
+            src={images.cakes.home}
             alt="Celebration cake from Kokkos Cafe Bistro"
             fill
             sizes="(max-width: 1024px) 100vw, 55vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-1000 group-hover:scale-105"
           />
         </div>
       </div>

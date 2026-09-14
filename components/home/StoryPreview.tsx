@@ -7,16 +7,16 @@ export default function StoryPreview() {
   return (
     <section className="overflow-hidden bg-kokkos-green-dark text-kokkos-cream">
       <div className="mx-auto grid max-w-[1600px] lg:grid-cols-2">
-        <div className="relative min-h-[500px] lg:min-h-[700px]">
+        <div className="group relative min-h-[500px] overflow-hidden lg:min-h-[700px]">
           <Image
             src={images.story.atmosphere}
             alt="The atmosphere at Kokkos Cafe Bistro"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-1000 group-hover:scale-105"
           />
 
-          <div className="absolute inset-0 bg-black/10" />
+          <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/5" />
         </div>
 
         <div className="flex items-center px-6 py-20 sm:px-10 lg:px-16 xl:px-24">
@@ -43,10 +43,16 @@ export default function StoryPreview() {
 
               <Link
                 href="/story"
-                className="mt-9 inline-flex items-center gap-4 border-b border-kokkos-cream/50 pb-2 text-[10px] font-semibold uppercase tracking-[0.2em] transition-colors hover:border-kokkos-cream"
+                className="group mt-9 inline-flex items-center gap-4 border-b border-kokkos-cream/50 pb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-kokkos-cream transition-colors duration-300 hover:border-kokkos-cream hover:text-kokkos-sand"
               >
-                Discover our story
-                <span>→</span>
+                <span>Discover our story</span>
+
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  →
+                </span>
               </Link>
             </Reveal>
           </div>

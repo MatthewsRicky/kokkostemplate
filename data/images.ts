@@ -47,6 +47,7 @@ export const images = {
       "/images/kokkos/cake-05.jpg",
     ],
     celebration: "/images/kokkos/cake-celebration.jpg",
+    home: "/images/kokkos/cake-01.jpg",
   },
 
   /**

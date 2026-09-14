@@ -120,7 +120,7 @@ export default function MenuFilters({ categories }: MenuFiltersProps) {
   };
 
   return (
-    <div className="sticky top-[105px] z-40 h-[54px] border-y border-kokkos-line bg-kokkos-cream/75 backdrop-blur-md">
+    <div className="sticky top-[82px] z-40 h-[54px] border-y border-kokkos-line bg-kokkos-cream/75 backdrop-blur-md">
       <div
         ref={containerRef}
         className="h-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"

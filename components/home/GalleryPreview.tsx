@@ -29,37 +29,37 @@ export default function GalleryPreview() {
 
         <div className="grid gap-4 md:grid-cols-12 md:grid-rows-[240px_320px]">
           <Reveal className="md:col-span-7">
-            <div className="relative h-[320px] overflow-hidden md:h-full">
+            <div className="group relative h-[320px] overflow-hidden md:h-full">
               <Image
                 src={gallery[0]}
                 alt="Kokkos Cafe Bistro atmosphere"
                 fill
                 sizes="(max-width: 768px) 100vw, 58vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           </Reveal>
 
           <Reveal className="md:col-span-5">
-            <div className="relative h-[260px] overflow-hidden md:h-full">
+            <div className="group relative h-[260px] overflow-hidden md:h-full">
               <Image
                 src={gallery[1]}
                 alt="Food at Kokkos Cafe Bistro"
                 fill
                 sizes="(max-width: 768px) 100vw, 42vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           </Reveal>
 
           <Reveal className="md:col-span-12">
-            <div className="relative h-[280px] overflow-hidden md:h-full">
+            <div className="group relative h-[280px] overflow-hidden md:h-full">
               <Image
                 src={gallery[2]}
                 alt="Kokkos Cafe Bistro in Diani Beach"
                 fill
                 sizes="100vw"
-                className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           </Reveal>

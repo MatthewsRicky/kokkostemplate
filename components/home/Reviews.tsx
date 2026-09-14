@@ -1,3 +1,4 @@
+
 import Reveal from "@/components/ui/Reveal";
 import { reviews } from "@/data/reviews";
 
@@ -21,9 +22,15 @@ export default function Reviews() {
 
         <div className="mt-16 grid gap-px bg-kokkos-cream/10 md:grid-cols-3">
           {reviews.map((review, index) => (
-            <Reveal key={index} delay={index * 0.08}>
+            <Reveal
+              key={`${review.source}-${index}`}
+              delay={index * 0.08}
+            >
               <article className="h-full bg-kokkos-charcoal p-8 sm:p-10">
-                <div className="mb-10 text-sm tracking-[0.25em] text-kokkos-sand">
+                <div
+                  aria-label="5 out of 5 stars"
+                  className="mb-10 text-sm tracking-[0.25em] text-kokkos-sand"
+                >
                   ★★★★★
                 </div>
 
@@ -42,3 +49,5 @@ export default function Reviews() {
     </section>
   );
 }
+
+

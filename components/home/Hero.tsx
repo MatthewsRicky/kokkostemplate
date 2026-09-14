@@ -11,7 +11,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="object-cover transition-transform duration-[1800ms] ease-out"
       />
 
       <div className="absolute inset-0 bg-black/45" />
@@ -36,10 +36,14 @@ export default function Hero() {
 
               <Link
                 href="/menu"
-                className="group inline-flex w-fit items-center gap-5 border border-kokkos-cream/50 px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 hover:bg-kokkos-cream hover:text-kokkos-charcoal"
+                className="group inline-flex w-fit items-center gap-5 border border-kokkos-cream/50 px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kokkos-cream transition-colors duration-300 hover:border-kokkos-cream hover:bg-kokkos-cream hover:text-kokkos-charcoal"
               >
-                Explore the Menu
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                <span>Explore the Menu</span>
+
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
                   →
                 </span>
               </Link>

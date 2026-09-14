@@ -1,30 +1,21 @@
+
 @import "tailwindcss";
 
 :root {
-  --kokkos-cream: #f5f1e8;
-  --kokkos-paper: #fbf9f4;
-  --kokkos-charcoal: #1c1c19;
-  --kokkos-soft-black: #11110f;
-  --kokkos-green: #59654f;
-  --kokkos-green-dark: #3f4938;
-  --kokkos-wood: #9a704a;
-  --kokkos-sand: #d6c4a7;
-  --kokkos-line: rgba(28, 28, 25, 0.14);
-
-  --background: var(--kokkos-cream);
-  --foreground: var(--kokkos-charcoal);
+  --background: #f5f1e8;
+  --foreground: #1c1c19;
 }
 
 @theme inline {
-  --color-kokkos-cream: var(--kokkos-cream);
-  --color-kokkos-paper: var(--kokkos-paper);
-  --color-kokkos-charcoal: var(--kokkos-charcoal);
-  --color-kokkos-soft-black: var(--kokkos-soft-black);
-  --color-kokkos-green: var(--kokkos-green);
-  --color-kokkos-green-dark: var(--kokkos-green-dark);
-  --color-kokkos-wood: var(--kokkos-wood);
-  --color-kokkos-sand: var(--kokkos-sand);
-  --color-kokkos-line: var(--kokkos-line);
+  --color-kokkos-cream: #f5f1e8;
+  --color-kokkos-paper: #fbf9f4;
+  --color-kokkos-charcoal: #1c1c19;
+  --color-kokkos-soft-black: #11110f;
+  --color-kokkos-green: #59654f;
+  --color-kokkos-green-dark: #3f4938;
+  --color-kokkos-wood: #9a704a;
+  --color-kokkos-sand: #d6c4a7;
+  --color-kokkos-line: rgba(28, 28, 25, 0.14);
 
   --font-sans: var(--font-body);
   --font-serif: var(--font-display);
@@ -50,7 +41,6 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -59,9 +49,9 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-::selection {
-  background: var(--kokkos-charcoal);
-  color: var(--kokkos-cream);
+*::selection {
+  background: #1c1c19;
+  color: #f5f1e8;
 }
 
 img {
@@ -84,3 +74,4 @@ img {
 .kokkos-fade-up {
   animation: kokkos-fade-up 0.8s ease-out both;
 }
+

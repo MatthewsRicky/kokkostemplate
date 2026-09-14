@@ -50,10 +50,14 @@ export default function MenuHighlights() {
 
             <Link
               href="/menu"
-              className="group flex w-fit items-center gap-4 border-b border-kokkos-charcoal pb-2 text-[10px] font-semibold uppercase tracking-[0.2em]"
+              className="group flex w-fit items-center gap-4 border-b border-kokkos-charcoal pb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-kokkos-charcoal transition-colors duration-300 hover:border-kokkos-green hover:text-kokkos-green"
             >
-              View full menu
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
+              <span>View full menu</span>
+
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
                 →
               </span>
             </Link>
@@ -65,29 +69,29 @@ export default function MenuHighlights() {
             <Reveal key={category.title} delay={index * 0.05}>
               <Link
                 href="/menu"
-                className="group relative block min-h-[260px] overflow-hidden bg-kokkos-paper p-7 sm:min-h-[320px] sm:p-10"
+                className="group relative block min-h-[300px] overflow-hidden bg-kokkos-paper p-7 sm:min-h-[340px] sm:p-10"
               >
                 <Image
                   src={category.image}
                   alt={`${category.title} at Kokkos Cafe Bistro`}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover opacity-0 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+                  className="object-cover opacity-100 transition-all duration-700 md:opacity-50 md:group-hover:scale-105 md:group-hover:opacity-100"
                 />
 
-                <div className="absolute inset-0 bg-kokkos-charcoal/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-kokkos-charcoal/65 opacity-100 transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-100" />
 
-                <div className="relative z-10 flex h-full flex-col justify-between">
-                  <span className="text-[10px] font-semibold tracking-[0.2em] text-kokkos-green transition-colors group-hover:text-kokkos-cream/70">
+                <div className="relative z-10 flex h-full min-h-[246px] flex-col justify-between sm:min-h-[286px]">
+                  <span className="text-[10px] font-semibold tracking-[0.2em] text-kokkos-cream/70 transition-colors duration-300 md:text-kokkos-green md:group-hover:text-kokkos-cream/70">
                     {category.number}
                   </span>
 
                   <div>
-                    <h3 className="font-serif text-4xl transition-colors group-hover:text-kokkos-cream sm:text-5xl">
+                    <h3 className="font-serif text-4xl text-kokkos-charcoal group-hover:text-kokkos-cream transition-colors duration-300 sm:text-5xl">
                       {category.title}
                     </h3>
 
-                    <p className="mt-3 max-w-xs text-sm text-kokkos-charcoal/55 transition-colors group-hover:text-kokkos-cream/70">
+                    <p className="mt-3 max-w-xs text-sm text-kokkos-charcoal group-hover:text-kokkos-cream/70 transition-colors duration-300">
                       {category.description}
                     </p>
                   </div>

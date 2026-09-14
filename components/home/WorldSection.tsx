@@ -38,7 +38,7 @@ export default function WorldSection() {
         <div className="mt-16 flex flex-wrap justify-center gap-x-8 gap-y-4 sm:gap-x-12">
           {influences.map((influence, index) => (
             <Reveal key={influence} delay={index * 0.05}>
-              <span className="font-serif text-2xl text-kokkos-charcoal/65 sm:text-3xl">
+              <span className="inline-block font-serif text-2xl text-kokkos-charcoal/65 transition-colors duration-300 hover:text-kokkos-green sm:text-3xl">
                 {influence}
               </span>
             </Reveal>
