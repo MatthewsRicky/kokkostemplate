@@ -15,10 +15,28 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const variants = {
-    dark: "bg-kokkos-charcoal text-kokkos-cream hover:bg-kokkos-green-dark",
-    light: "bg-kokkos-cream text-kokkos-charcoal hover:bg-kokkos-paper",
-    outline:
-      "border border-kokkos-cream/60 text-kokkos-cream hover:bg-kokkos-cream hover:text-kokkos-charcoal",
+    dark: [
+      "bg-kokkos-charcoal",
+      "text-kokkos-cream",
+      "hover:bg-kokkos-green-dark",
+      "hover:text-kokkos-cream",
+    ].join(" "),
+
+    light: [
+      "bg-kokkos-cream",
+      "text-kokkos-charcoal",
+      "hover:bg-kokkos-green",
+      "hover:text-kokkos-cream",
+    ].join(" "),
+
+    outline: [
+      "border",
+      "border-kokkos-cream/60",
+      "text-kokkos-cream",
+      "hover:border-kokkos-cream",
+      "hover:bg-kokkos-cream",
+      "hover:text-kokkos-charcoal",
+    ].join(" "),
   };
 
   return (
@@ -26,9 +44,14 @@ export default function Button({
       href={href}
       className={`inline-flex items-center justify-center gap-3 px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] transition-colors duration-300 ${variants[variant]} ${className}`}
     >
-      {children}
+      <span>{children}</span>
 
-      <span aria-hidden="true">→</span>
+      <span
+        aria-hidden="true"
+        className="transition-transform duration-300 group-hover:translate-x-1"
+      >
+        →
+      </span>
     </Link>
   );
 }

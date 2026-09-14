@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+
 import type { MenuCategory } from "@/data/menu";
 
 type MenuFiltersProps = {
@@ -69,14 +70,12 @@ export default function MenuFilters({ categories }: MenuFiltersProps) {
 
   useEffect(() => {
     const button = categoryRefs.current[activeCategory];
-
     const container = containerRef.current;
 
     if (!button || !container) return;
 
     const buttonLeft = button.offsetLeft;
     const buttonWidth = button.offsetWidth;
-
     const containerWidth = container.offsetWidth;
 
     const targetScroll = buttonLeft - containerWidth / 2 + buttonWidth / 2;
@@ -121,12 +120,12 @@ export default function MenuFilters({ categories }: MenuFiltersProps) {
   };
 
   return (
-    <div className="sticky top-[72px] z-40 border-y border-kokkos-line bg-kokkos-cream/95 backdrop-blur-md">
+    <div className="sticky top-[105px] z-40 h-[54px] border-y border-kokkos-line bg-kokkos-cream/75 backdrop-blur-md">
       <div
         ref={containerRef}
-        className="mx-auto overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="h-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
-        <div className="mx-auto flex min-w-max max-w-[1600px] gap-1 px-6 py-2 sm:px-8 lg:px-12">
+        <div className="mx-auto flex h-full min-w-max max-w-[1600px] items-center gap-1 px-6 sm:px-8 lg:px-12">
           <button
             type="button"
             onClick={() => scrollToCategory("all")}

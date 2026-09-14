@@ -1,6 +1,8 @@
+import Image from "next/image";
 import MenuCategory from "@/components/menu/MenuCategory";
 import MenuFilters from "@/components/menu/MenuFilters";
 import Reveal from "@/components/ui/Reveal";
+import { images } from "@/data/images";
 import { menuCategories } from "@/data/menu";
 
 export const metadata = {
@@ -12,24 +14,41 @@ export const metadata = {
 export default function MenuPage() {
   return (
     <main className="bg-kokkos-cream">
-      <section className="px-6 pb-20 pt-36 sm:px-8 sm:pb-28 lg:px-12">
+      <section className="px-6 pb-20 pt-36 sm:px-8 sm:pb-28 lg:px-12 lg:pb-32">
         <div className="mx-auto max-w-[1400px]">
-          <Reveal>
-            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-kokkos-green">
-              Kokkos Café & Bistro
-            </p>
+          <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-end">
+            <Reveal>
+              <div>
+                <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-kokkos-green">
+                  Kokkos Café & Bistro
+                </p>
 
-            <h1 className="max-w-4xl font-serif text-7xl leading-[0.85] sm:text-8xl md:text-9xl">
-              Good food.
-              <br />
-              No fuss.
-            </h1>
+                <h1 className="max-w-4xl font-serif text-7xl leading-[0.85] sm:text-8xl md:text-9xl">
+                  Good food.
+                  <br />
+                  No fuss.
+                </h1>
 
-            <p className="mt-8 max-w-xl text-sm leading-8 text-kokkos-charcoal/60 sm:text-base">
-              From slow breakfasts and good coffee to generous lunches,
-              international flavours and something sweet at the end.
-            </p>
-          </Reveal>
+                <p className="mt-8 max-w-xl text-sm leading-8 text-kokkos-charcoal/60 sm:text-base">
+                  From slow breakfasts and good coffee to generous lunches,
+                  international flavours and something sweet at the end.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src={images.menu.breakfast}
+                  alt="Food at Kokkos Cafe Bistro"
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                />
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

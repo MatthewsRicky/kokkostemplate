@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { images } from "@/data/images";
 
 export const metadata = {
   title: "Contact & Find Us | Kokkos Cafe Bistro",
@@ -17,7 +19,17 @@ export default function ContactPage() {
     <main className="bg-kokkos-cream text-kokkos-charcoal">
       {/* Hero */}
       <section className="relative flex min-h-[60vh] items-end overflow-hidden bg-kokkos-charcoal">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(154,112,74,0.28),transparent_40%),linear-gradient(125deg,#11110f,#59654f)]" />
+        <Image
+          src={images.contact.hero}
+          alt="Kokkos Cafe Bistro in Diani Beach"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+
+        <div className="absolute inset-0 bg-kokkos-soft-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-kokkos-soft-black via-transparent to-transparent" />
 
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 pb-16 sm:px-8 lg:px-12 lg:pb-24">
           <Reveal>
@@ -138,7 +150,7 @@ export default function ContactPage() {
 
       {/* Map / directions */}
       <section className="bg-kokkos-green-dark px-6 py-24 text-kokkos-cream sm:px-8 lg:px-12 lg:py-32">
-        <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <Reveal>
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-kokkos-sand">
@@ -148,18 +160,28 @@ export default function ContactPage() {
               <h2 className="mt-5 max-w-3xl font-serif text-5xl leading-none sm:text-6xl lg:text-7xl">
                 Find your way to Kokkos.
               </h2>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Kokkos+Cafe+Bistro+Diani+Beach"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-10 inline-flex w-fit border border-kokkos-cream/40 px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kokkos-cream transition-colors hover:bg-kokkos-cream hover:text-kokkos-charcoal"
+              >
+                Get Directions
+              </a>
             </div>
           </Reveal>
 
           <Reveal delay={0.1}>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Kokkos+Cafe+Bistro+Diani+Beach"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex w-fit border border-kokkos-cream/40 px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kokkos-cream transition-colors hover:bg-kokkos-cream hover:text-kokkos-charcoal"
-            >
-              Get Directions
-            </a>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src={images.contact.location}
+                alt="Kokkos Cafe Bistro location in Diani Beach"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 45vw, 100vw"
+              />
+            </div>
           </Reveal>
         </div>
       </section>

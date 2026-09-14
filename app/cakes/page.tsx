@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { images } from "@/data/images";
 
 export const metadata = {
   title: "Cakes & Special Occasions | Kokkos Cafe Bistro",
@@ -14,7 +16,17 @@ export default function CakesPage() {
     <main className="bg-kokkos-cream text-kokkos-charcoal">
       {/* Hero */}
       <section className="relative flex min-h-[68vh] items-end overflow-hidden bg-kokkos-green-dark">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_25%,rgba(214,196,167,0.25),transparent_40%),linear-gradient(135deg,#3f4938,#11110f)]" />
+        <Image
+          src={images.cakes.hero}
+          alt="Celebration cake from Kokkos Cafe Bistro"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+
+        <div className="absolute inset-0 bg-kokkos-soft-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-kokkos-soft-black via-transparent to-transparent" />
 
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 pb-16 sm:px-8 lg:px-12 lg:pb-24">
           <Reveal>
@@ -82,14 +94,34 @@ export default function CakesPage() {
 
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              "Birthdays",
-              "Celebrations",
-              "Special Gatherings",
-              "Something Just Because",
+              {
+                title: "Birthdays",
+                image: images.cakes.gallery[0],
+              },
+              {
+                title: "Celebrations",
+                image: images.cakes.gallery[1],
+              },
+              {
+                title: "Special Gatherings",
+                image: images.cakes.gallery[2],
+              },
+              {
+                title: "Something Just Because",
+                image: images.cakes.gallery[3],
+              },
             ].map((occasion, index) => (
-              <Reveal key={occasion} delay={index * 0.06}>
+              <Reveal key={occasion.title} delay={index * 0.06}>
                 <article className="group relative aspect-[4/5] overflow-hidden bg-kokkos-charcoal">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(214,196,167,0.3),transparent_35%),linear-gradient(145deg,#59654f,#11110f)] transition-transform duration-700 group-hover:scale-105" />
+                  <Image
+                    src={occasion.image}
+                    alt={`${occasion.title} cake from Kokkos Cafe Bistro`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-kokkos-soft-black/80 via-transparent to-transparent" />
 
                   <div className="relative flex h-full flex-col justify-end p-7">
                     <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-kokkos-sand">
@@ -97,7 +129,7 @@ export default function CakesPage() {
                     </span>
 
                     <h3 className="mt-3 font-serif text-3xl text-kokkos-cream">
-                      {occasion}
+                      {occasion.title}
                     </h3>
                   </div>
                 </article>

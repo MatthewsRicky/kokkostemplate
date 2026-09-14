@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { navigationItems } from "@/data/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,17 +30,23 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-kokkos-line bg-kokkos-cream/95 text-kokkos-charcoal shadow-sm backdrop-blur-md"
-          : "bg-transparent text-kokkos-cream"
+          ? "border-b border-kokkos-line bg-kokkos-cream/85 text-kokkos-charcoal shadow-sm backdrop-blur-md"
+          : "bg-kokkos-charcoal/40 text-kokkos-cream"
       }`}
     >
-      <div className="mx-auto flex h-[72px] max-w-[1600px] items-center justify-between px-6 sm:px-8 lg:px-12">
+      <div className="mx-auto flex h-[92px] max-w-[1600px] items-center justify-between px-6 sm:px-8 lg:px-12">
         <Link
           href="/"
           className="relative z-10 font-serif text-3xl tracking-[0.08em]"
           onClick={() => setMenuOpen(false)}
         >
-          KOKKOS
+          <Image
+            src="/images/logo.png"
+            alt="Kokkos Logo"
+            width={100}
+            height={48}
+            className="h-fit w-fit bg-amber-50 rounded-full" 
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -57,7 +64,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             href="/contact"
-            className="hidden border border-current px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.18em] transition-all hover:bg-current hover:text-kokkos-cream md:block"
+            className="hidden border border-current px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.18em] transition-all hover:bg-current hover:text-black md:block"
           >
             Find Us
           </Link>
