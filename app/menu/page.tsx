@@ -4,13 +4,16 @@ import MenuFilters from "@/components/menu/MenuFilters";
 import Reveal from "@/components/ui/Reveal";
 import { images } from "@/data/images";
 import { menuCategories } from "@/data/menu";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Menu",
   description:
-    "Explore the Kokkos Café & Bistro menu in Diani Beach, from breakfast and coffee to pasta, burgers, curries, desserts and more.",
+    "Explore breakfast, sandwiches, pastas, snacks, salads, burgers, mains and Indian curries at Kokkos Café & Bistro in Diani Beach.",
+  alternates: {
+    canonical: "/menu",
+  },
 };
-
 export default function MenuPage() {
   return (
     <main className="bg-kokkos-cream">

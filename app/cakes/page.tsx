@@ -4,12 +4,16 @@ import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { images } from "@/data/images";
-
-export const metadata = {
-  title: "Cakes & Special Occasions | Kokkos Cafe Bistro",
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Cakes & Special Occasions",
   description:
-    "Celebrate special occasions with cakes from Kokkos Cafe Bistro in Diani Beach, Kenya. Contact Kokkos to discuss your celebration cake.",
+    "Celebrate birthdays, anniversaries and special occasions with cakes from Kokkos Café & Bistro in Diani Beach, Kenya.",
+  alternates: {
+    canonical: "/cakes",
+  },
 };
+
 
 export default function CakesPage() {
   return (

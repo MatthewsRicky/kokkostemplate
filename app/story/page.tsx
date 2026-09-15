@@ -4,12 +4,17 @@ import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { images } from "@/data/images";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Our Story | Kokkos Cafe Bistro",
+export const metadata: Metadata = {
+  title: "Kokkos Café & Bistro | Diani Beach",
   description:
-    "Discover the story behind Kokkos Cafe Bistro in Diani Beach, Kenya. Serving fresh, hearty food and flavours inspired by travel since 2000.",
+    "Visit Kokkos Café & Bistro in Diani Beach, Kenya for fresh food, breakfast, coffee, homemade dishes and flavours inspired by travel.",
+  alternates: {
+    canonical: "/",
+  },
 };
+
 
 export default function StoryPage() {
   return (

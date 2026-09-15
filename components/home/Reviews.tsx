@@ -22,16 +22,15 @@ export default function Reviews() {
 
         <div className="mt-16 grid gap-px bg-kokkos-cream/10 md:grid-cols-3">
           {reviews.map((review, index) => (
-            <Reveal
-              key={`${review.source}-${index}`}
-              delay={index * 0.08}
-            >
+            <Reveal key={`${review.source}-${index}`} delay={index * 0.08}>
               <article className="h-full bg-kokkos-charcoal p-8 sm:p-10">
                 <div
                   aria-label="5 out of 5 stars"
                   className="mb-10 text-sm tracking-[0.25em] text-kokkos-sand"
                 >
-                  ★★★★★
+                  <p className="mb-10 text-[9px] font-semibold uppercase tracking-[0.2em] text-kokkos-sand">
+                    Guest review
+                  </p>
                 </div>
 
                 <blockquote className="font-serif text-2xl leading-tight text-kokkos-cream/90">
