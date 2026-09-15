@@ -79,19 +79,19 @@ export default function MenuHighlights() {
                   className="object-cover opacity-100 transition-all duration-700 md:opacity-50 md:group-hover:scale-105 md:group-hover:opacity-100"
                 />
 
-                <div className="absolute inset-0 bg-kokkos-charcoal/65 opacity-100 transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-100" />
+                <div className="absolute inset-0 md:bg-kokkos-charcoal/65 opacity-100 transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-100" />
 
                 <div className="relative z-10 flex h-full min-h-[246px] flex-col justify-between sm:min-h-[286px]">
-                  <span className="text-[10px] font-semibold tracking-[0.2em] text-kokkos-cream/70 transition-colors duration-300 md:text-kokkos-green md:group-hover:text-kokkos-cream/70">
+                  <span className="text-[10px] font-semibold tracking-[0.2em] bg-kokkos-sand/60 rounded p-1 w-fit  text-kokkos-cream/70 transition-colors duration-300 md:text-kokkos-green md:group-hover:text-kokkos-cream/70">
                     {category.number}
                   </span>
 
-                  <div>
-                    <h3 className="font-serif text-4xl text-kokkos-charcoal group-hover:text-kokkos-cream transition-colors duration-300 sm:text-5xl">
+                  <div className="flex flex-col justify-center m-auto gap-2">
+                    <h3 className="font-serif text-4xl text-kokkos-soft-black px-2 py-3 bg-kokkos-sand/60 rounded text-center group-hover:text-kokkos-cream transition-colors duration-300 sm:text-5xl">
                       {category.title}
                     </h3>
 
-                    <p className="mt-3 max-w-xs text-sm text-kokkos-charcoal group-hover:text-kokkos-cream/70 transition-colors duration-300">
+                    <p className="mt-3 max-w-xs text-sm text-kokkos-charcoal bg-kokkos-sand/60 rounded p-1 text-center  group-hover:text-kokkos-cream/70 transition-colors duration-300">
                       {category.description}
                     </p>
                   </div>

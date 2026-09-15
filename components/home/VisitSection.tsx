@@ -8,7 +8,7 @@ export default function VisitSection() {
     <section className="bg-kokkos-wood px-6 py-24 text-kokkos-cream sm:px-8 sm:py-32 lg:px-12 lg:py-40">
       <div className="mx-auto max-w-[1400px]">
         <Reveal>
-          <div className="grid gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-24">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-24">
             <div>
               <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.28em] text-kokkos-sand">
                 Find us in Diani
@@ -20,7 +20,7 @@ export default function VisitSection() {
                 find us.
               </h2>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col gap-3 sm:flex-row h-fit sm:items-center sm:justify-center">
               <Button href="/contact">Find Kokkos</Button>
 
               <WhatsAppButton message="Hello Kokkos Café & Bistro, I would like to make an enquiry.">
