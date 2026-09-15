@@ -5,6 +5,8 @@ import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { images } from "@/data/images";
 import type { Metadata } from "next";
+import WhatsAppButton from "@/components/contact/WhatsAppButton";
+import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Cakes & Special Occasions",
   description:
@@ -171,6 +173,15 @@ export default function CakesPage() {
               Contact Kokkos
             </Link>
           </Reveal>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <WhatsAppButton message="Hello Kokkos Café & Bistro, I would like to enquire about a cake for a special occasion.">
+              Enquire About a Cake
+            </WhatsAppButton>
+
+            <Button href="/contact" variant="dark">
+              Send an Enquiry
+            </Button>
+          </div>
         </div>
       </section>
     </main>

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import RestaurantSchema from "@/components/seo/RestaurantSchema";
+import WhatsAppFloatingButton from "@/components/contact/WhatAppFloatingButton";
 
 const displayFont = Cormorant_Garamond({
   variable: "--font-display",
@@ -90,6 +91,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <WhatsAppFloatingButton />
       </body>
     </html>
   );

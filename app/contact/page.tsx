@@ -6,6 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { images } from "@/data/images";
 import ContactForm from "@/components/contact/ContactForm";
 import { Metadata } from "next";
+import WhatsAppButton from "@/components/contact/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Contact & Find Us",
@@ -52,7 +53,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact details */}
-  
+
       {/* Keep your existing contact hero here */}
 
       <section className="px-6 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
@@ -69,8 +70,8 @@ export default function ContactPage() {
 
               <p className="mt-8 max-w-md text-sm leading-8 text-kokkos-charcoal/60">
                 Whether you&apos;re planning a meal, celebrating a special
-                occasion or simply have a question, send us a message and
-                the Kokkos team will get back to you.
+                occasion or simply have a question, send us a message and the
+                Kokkos team will get back to you.
               </p>
 
               <div className="mt-10 space-y-6 border-t border-kokkos-line pt-8">
@@ -99,6 +100,9 @@ export default function ContactPage() {
                     kokkos.diani@gmail.com
                   </a>
                 </div>
+                <WhatsAppButton message="Hello Kokkos Café & Bistro, I would like to make an enquiry.">
+                  Chat on WhatsApp
+                </WhatsAppButton>
               </div>
             </div>
           </Reveal>
@@ -108,7 +112,6 @@ export default function ContactPage() {
           </Reveal>
         </div>
       </section>
-  
     </main>
   );
 }
