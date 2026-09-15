@@ -43,7 +43,7 @@ export default function Navbar() {
           className="relative z-10 flex items-center"
         >
           <Image
-            src="/images/logo.png"
+            src="/KokkosCafeLogo.avif"
             alt="Kokkos Cafe Bistro"
             width={100}
             height={48}
